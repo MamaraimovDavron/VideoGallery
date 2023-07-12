@@ -12,14 +12,18 @@
     <div class="container mt-4 mb-4">
         <h1>Video Gallery</h1>
         <div class="inputButton">
-            <input type="text" placeholder="Write the path">
-            <button>Add</button>
+            <input type="text" placeholder="Write the path" id="input-text">
+            <button id="btnAdd" onclick="AddLink()">Add</button>
         </div>
 
-        <div class="row">
-            <div class="col-lg-6 col-sm-4 col-md-3 box">
-            </div>
-            
+        <div class="row" id="main-box">
+            <div class="col-lg-6 col-sm-4 col-md-3">
+                <div class="video-box">
+                    <video width="300" height="250" controls autoplay>
+                        <source src="https://www.youtube.com/watch?v=nqye02H_H6I" type="video/mp4">
+                    </video>
+                </div>
+            </div>   
         </div>
         
     </div>
