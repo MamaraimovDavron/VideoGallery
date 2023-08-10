@@ -23,21 +23,35 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-family: "Century Gothic", sans-serif;
   font-weight: bold;
 }
-.container .box {
+.container .row {
+  box-shadow: 0px 0px 15px gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  padding: 10px;
+}
+.container .row .col {
+  box-shadow: 0px 0px 2px black;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 2px black;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
-  flex-wrap: wrap;
+  position: relative;
 }
-.container .box iframe {
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px grey;
+.container .row .col .iframeBox {
+  width: 100%;
+  border-radius: 10px;
+}
+.container .row .col .btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }/*# sourceMappingURL=style.css.map */
