@@ -2,15 +2,47 @@ const inputValue = document.getElementById("input");
 const videoBox = document.getElementById("box");
 
 let index = 2;
+let lastLinks = "";
+const testElement = document.createElement("div");
+
+
+const checkLink = (link) => {
+    const newLink = document.getElementsByClassName("iframeBox");
+
+    testElement.src = link;
+
+    // console.log(newLink);
+    // link.replace("watch?v=","embed/");
+    // console.log(testElement.src);
+
+    for(const element of newLink){
+        if(element.src.replace("watch?v=","embed/") == testElement.src.replace("watch?v=","embed/")){
+            alert("Please, change your link!");
+            return true;
+            // console.log('qayatadan kriitin');
+        }
+
+        // console.log(element);
+        // console.log(element.src)
+
+    }
+
+    return false;
+};
+
 
 const writeLink = () => {
 
+    const link = inputValue.value;
     // let initialPart;
     // let middlePart;
     // let lastPart;
     // let newValue;
 
-    if(inputValue.value == "") return;
+    if(link == "" || checkLink(link)) return;
+
+
+    lastLinks = videoBox.innerHTML;
 
     // let changedValue = '';
 
@@ -58,7 +90,7 @@ const writeLink = () => {
 
     const iframe = document.createElement('iframe');
     iframe.className = "iframeBox";
-    iframe.src = inputValue.value.replace("watch?v=","embed/");
+    iframe.src = link.replace("watch?v=","embed/");
     // console.log(changedValue);
     // console.log(iframe.src)
 
@@ -79,5 +111,11 @@ const removeVideo = (id) => {
 }
 
 const clearAll = () => {
+    lastLinks = videoBox.innerHTML;
+
     videoBox.innerHTML = "";
+}
+
+const back = () => {
+    videoBox.innerHTML = lastLinks;
 }

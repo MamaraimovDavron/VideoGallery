@@ -13,7 +13,7 @@
   padding: 20px;
 }
 .container .input-box {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,6 +29,15 @@
   font-weight: bold;
 }
 .container .input-box .btn-danger {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+}
+.container .input-box .btn-secondary {
   display: flex;
   flex-direction: row;
   align-items: center;
