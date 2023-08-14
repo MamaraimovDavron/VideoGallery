@@ -77,3 +77,7 @@ const removeVideo = (id) => {
     element.remove();
     // console.log(index);
 }
+
+const clearAll = () => {
+    videoBox.innerHTML = "";
+}

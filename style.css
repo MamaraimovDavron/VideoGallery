@@ -19,7 +19,16 @@
   align-items: center;
   justify-content: center;
 }
-.container .input-box .btn {
+.container .input-box .btn-success {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: bold;
+}
+.container .input-box .btn-danger {
   display: flex;
   flex-direction: row;
   align-items: center;
